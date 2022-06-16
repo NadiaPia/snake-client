@@ -12,9 +12,20 @@ const connect = function() {
     console.log("server says:", data);
   });
 
+  /*conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: PIA");
+  });*/
+
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: PIA");
+    //setTimeout(() => {conn.write("Move: up")}, 200);
+    //setTimeout(() => { conn.write("Move: down")}, 300);
+    //setTimeout(() => {conn.write("Move: left")}, 400);
+    //setTimeout(() => {conn.write("Move: right")}, 500);
+        
+    //setInterval(() => {conn.write("Move: up")}, 200);
   });
 
   // interpret incoming data as text
