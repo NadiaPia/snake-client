@@ -6,16 +6,16 @@ const connect = function() {
     host: "10.0.2.15",
     port: "50541"
   });
-  //console.log(conn)
+  console.log(conn)
 
   conn.on("data", (data) => {
     console.log("server says:", data);
   });
 
-  /*conn.on("connect", () => {
+  conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: PIA");
-  });*/
+  });
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
@@ -33,6 +33,8 @@ const connect = function() {
 
   return conn;
 };
+
+
 
 
 
