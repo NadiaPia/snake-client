@@ -1,5 +1,5 @@
 
-const {connect} = require('./client.js')
+const {connect} = require('./client.js');
 
 
 
