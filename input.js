@@ -1,4 +1,4 @@
-
+const {moveKeys} = require("./constants");
 //setup interface to handle user input from stdin
 
 let connection;
@@ -8,27 +8,18 @@ const setupInput = function(conn) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
-  stdin.resume();   
+  stdin.resume();
 
   const handleUserInput = function(key) {
+
     if (key === '\u0003') {
       process.exit();
     }
-    if (key === 'w') {
-      conn.write("Move: up");
-    }
-    if (key === 'a') {
-      conn.write("Move: left");
-    }
-    if (key === 's') {
-      conn.write("Move: down");
-    }
-    if (key === 'd') {
-      conn.write("Move: right");
-    }
-    if (key === ' ') {
-      conn.write("Say: Yammy!");
-    }
+
+    if (moveKeys[key]) {
+      conn.write(moveKeys[key]);
+    }    
+    
   };
 
   stdin.on("data", handleUserInput);
