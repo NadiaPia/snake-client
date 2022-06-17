@@ -15,11 +15,12 @@ npm run play
 
 ## Final Product
 
-!["snake game"](#)
-!["screenshot description"](#)
+!["snake game"](https://github.com/NadiaPia/snake-client/blob/master/docs/snake.png)
 
 
 ## Getting Started
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
+- Use w,s,a,d keyboard buttons to move the snake.
+- Use space keyboard buttons to send a message.
